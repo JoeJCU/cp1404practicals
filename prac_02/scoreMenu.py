@@ -18,17 +18,48 @@ while choice != <quit option>
 
 MENU = """
 G - Get a valid score
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
+P - Print result
+S - Show stars
+Q - Quit
+"""
 
 
-(G)et a valid score (must be 0-100 inclusive)
-(P)rint result (copy or import your function to determine the result from score.py)
-(S)how stars (this should print as many stars as the score)
-(Q)uit
+# (G)et a valid score (must be 0-100 inclusive)
+# (P)rint result (copy or import your function to determine the result from score.py)
+# (S)how stars (this should print as many stars as the score)
+# (Q)uit
+
 
 def main():
-    print(MENU)
+    """Main Function"""
+    user_input = input(f"{MENU}: ").upper()
+    # score = graded_score
 
-main()
+    while user_input != "Q":
+        if user_input == "G":
+            score = float(input("Enter Your Score: "))  # user input to get user score
+            score_check(score)  # running the 'graded_score function while inputting  the 'score' value
+            user_input = input(f"{MENU}: ").upper()
+        elif user_input == "P":
+            print(graded_score(score))
+            user_input = input(f"{MENU}: ").upper()
+
+
+print("Farewell")
+
+
+def graded_score(score):
+    """Determining the grade """
+    if score > 90:
+        return "Excellent"
+    elif score > 50:
+        return "Passable"
+    elif score > 0:
+        return "Bad"
+
+
+def show_stars(score):
+    """Score to stars"""
+    stars = '*' * int(score)
+    print(f"{stars}")
 
