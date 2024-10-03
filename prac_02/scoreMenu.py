@@ -43,6 +43,12 @@ def main():
         elif user_input == "P":
             print(graded_score(score))
             user_input = input(f"{MENU}: ").upper()
+        elif user_input == "S":
+            show_stars(score)
+            user_input = input(f"{MENU}: ").upper()
+        else:
+            print("Invalid option")
+            user_input = input(f"{MENU}: ").upper()
 
 
 print("Farewell")
@@ -63,3 +69,15 @@ def show_stars(score):
     stars = '*' * int(score)
     print(f"{stars}")
 
+
+def score_check(score):
+    """"Checking to see if the Score is valid"""
+    if score > 100:
+        print("Invalid score")
+        score = float(input("Enter score: "))
+    elif score < 0:
+        print("Invalid score")
+        score = float(input("Enter score: "))
+
+
+main()
