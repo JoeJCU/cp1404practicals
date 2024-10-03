@@ -7,7 +7,7 @@ def main():
     print(result)
 
     #random
-    score = random.randint(-100,100)
+    score = random.randint(0,100)
     print(score)
     result = userscore(score)
 

@@ -1,3 +1,7 @@
+MENU = """C - Convert Celsius to Fahrenheit
+F - Convert Fahrenheit to Celsius
+Q - Quit"""
+
 fahrenheit = float(input("Enter the temperature in Fahrenhit: "))
 
 def fahrenhit_celcius(fahrenheit):
