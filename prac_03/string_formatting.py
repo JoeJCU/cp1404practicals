@@ -35,11 +35,17 @@ for i, number in enumerate(numbers, 1):
 # TODO: Use f-string formatting to produce the output:
 # 1922 Gibson L-5 CES for about $16,036!
 
-total_cost =
-print(f"{year} {name} for about ")
+edited_cost = cost/1000
+total_cost = round(edited_cost, 3)
+
+print(f"{year} {name} for about {total_cost}!")
 
 # TODO: Using a for loop with the range function and f-string formatting,
 # produce the following right-aligned output (DO NOT use a list):
+for i in range(0,11,1):   #starts at 0 and end at 11('10'). increases in incrments of 1(1,2,3....)
+    num = pow(2,i)
+    print(f"2^{i} is {num}")
+
 # 2 ^ 0 is    1
 # 2 ^ 1 is    2
 # 2 ^ 2 is    4
