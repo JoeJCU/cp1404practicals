@@ -6,6 +6,7 @@ Data file -> lists program
 FILENAME = "subject_data.txt"
 data_list = []
 
+
 def main():
     data = load_data()
     # print(data)
@@ -23,10 +24,9 @@ def load_data():
         # print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         # print(parts)  # See if that worked
-        data_list.append(parts) # adding =the info into the empty list created above(data_list)
+        data_list.append(parts)  # adding =the info into the empty list created above(data_list)
 
         # print("----------")
-
 
     input_file.close()
     print(data_list)
@@ -34,10 +34,8 @@ def load_data():
 
 
 def display_data():
-    for data in data_list: # goes through every list inside the list
+    for data in data_list:  # goes through every list inside the list
         print(f"{data[0]} is taught by {data[1]} and has {data[2]} students")
-
-
 
 
 main()

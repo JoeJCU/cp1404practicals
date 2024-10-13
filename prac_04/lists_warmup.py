@@ -1,7 +1,5 @@
 numbers = [3, 1, 4, 1, 5, 9, 2]
 
-
-
 # numbers[0] = 3
 # numbers[-1] = 2
 # numbers[3] = 1
@@ -26,11 +24,9 @@ print(numbers)
 
 print(numbers[2:])
 
-#Print whether 9 is an element of numbers
+# Print whether 9 is an element of numbers
 
 if 9 in numbers:
     print(f"9 is in numbers, {numbers}")
 else:
     print(f"no 9 is in numbers, {numbers}")
-
-
