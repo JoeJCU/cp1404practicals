@@ -9,6 +9,8 @@ def main():
     for number in numbers:
         print(f"number: {number}")
 
+    print(f"The first number is {numbers[0]}")
+
 
 
 main()
