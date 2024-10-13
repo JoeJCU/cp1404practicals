@@ -60,6 +60,7 @@ print(large_num)
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
 
-last_names = []
+last_names = [full_names.split()]
+print(last_names)
 
-for large_names in full_names:
+# for large_names in full_names:
