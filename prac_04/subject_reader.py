@@ -23,13 +23,20 @@ def load_data():
         # print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         # print(parts)  # See if that worked
-        data_list.append(parts)
-        print(data_list)
+        data_list.append(parts) # adding =the info into the empty list created above(data_list)
+
         # print("----------")
 
 
-
-
     input_file.close()
+    print(data_list)
+    display_data()
+
+
+def display_data():
+    print(f"{data_list[0]} is taught by {data_list[1]} and has {data_list[2]} students")
+
+
+
 
 main()
