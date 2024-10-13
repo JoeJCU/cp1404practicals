@@ -34,7 +34,8 @@ def load_data():
 
 
 def display_data():
-    print(f"{data_list[0]} is taught by {data_list[1]} and has {data_list[2]} students")
+    for data in data_list: # goes through every list inside the list
+        print(f"{data[0]} is taught by {data[1]} and has {data[2]} students")
 
 
 
