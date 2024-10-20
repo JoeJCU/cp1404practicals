@@ -9,13 +9,13 @@ def second_main():
 
 def main():
     data_champs_wins = {
-
     } #dict
-    data_whole = []
+    # data_whole = []
     data_country_wins = []
 
     with open('wimbledon.csv', "r", encoding="utf-8-sig") as in_file:
         read = csv.reader(in_file) # reading the data in the csv
+
         for read_row in read: #iterating through each row in the data
             champ_wins = read_row[2]
             if champ_wins in data_champs_wins:
@@ -34,17 +34,12 @@ def main():
 def country_p(country_printed):
     print("These 12 countries have won Wimbledon: ")
     country_printed.sort() #soring all the countries alphabetically
-    print(*country_printed) #printing the countries
+    print(", ".join(sorted(country_printed))) #printing the countries
 
 def champs_p(champs_printed):
     print("Champions: ")
     for champ_name, champs_wins  in champs_printed.items():
         print(f"{champ_name}: {champs_wins}") # print from the dic
-
-
-
-
-
 
 
 second_main()
