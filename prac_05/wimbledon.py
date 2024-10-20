@@ -2,7 +2,10 @@
 import csv
 
 
-
+def second_main():
+    data_country_wins, data_champs_wins = main()
+    country_p(data_country_wins)
+    champs_p(data_champs_wins)
 
 def main():
     data_champs_wins = {
@@ -26,25 +29,17 @@ def main():
 
     return champ_wins, data_country_wins, data_champs_wins
 
-def second_main():
-    data_champs_wins, data_country_wins = main()
-    country_p(data_country_wins)
-    champs_p(data_champs_wins)
 
 
-
-def country_p(country_data):
+def country_p(country_printed):
     print("These 12 countries have won Wimbledon: ")
-    country_data.sort() #soring all the countries alphabetically
-    print(*country_data)
+    country_printed.sort() #soring all the countries alphabetically
+    print(*country_printed) #printing the countries
 
-
-
-
-
-
-
-
+def champs_p(champs_printed):
+    print("Champions: ")
+    for champ_name, champs_wins  in champs_printed.items():
+        print(f"{champ_name}: {champs_wins}") # print from the dic
 
 
 
