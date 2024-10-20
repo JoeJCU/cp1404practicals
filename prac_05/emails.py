@@ -8,7 +8,7 @@ def main():
         user_email = input("Enter your email: ")  # input and splits all the words up in the user emails
         # print(f"Text: {user_email}")
         # while user_email != "":
-        if user_email == "":
+        if user_email == "": #if the user doesn't enter anything into the user_email, print the dict
             for name, email in email_dicts.items():
                 print(f"name:{name}, email: {email})")
 
@@ -23,8 +23,8 @@ def main():
             user_name = input("Enter your name: ")
 
         #adding the name to the email_dicts dict
-        for name in user_name:
-            email_dicts[name] = user_name
+        # for name in user_name:
+        email_dicts[user_name] = user_email
         # displays all names and the email
 
 
