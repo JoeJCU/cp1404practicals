@@ -1,5 +1,5 @@
 
-from guitar import guitar_class:
+from guitar import guitar_class
 
 def main():
     guitar = []
