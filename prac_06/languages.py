@@ -14,8 +14,6 @@ def main():
         if language.typed == "Dynamic":  # Assuming 'typing' is an attribute for type system
             print(language.name)  # Assuming 'name' is the attribute for the language's name
 
-
-
 main()
 
 

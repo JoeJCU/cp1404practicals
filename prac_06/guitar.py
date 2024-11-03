@@ -1,5 +1,5 @@
 
-class guitar:
+class guitar_class:
     def __init__(self, name= "", year= 0, cost= 0):
         self.name = name
         self.year = year
@@ -15,4 +15,4 @@ class guitar:
         return current_year - self.year
 
     def is_vintage(self):
-        return self.get_age() >= 50 #should return true
+            return self.get_age() >= 50 #should return true
