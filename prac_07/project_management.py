@@ -42,7 +42,10 @@ def main():
             projects = update_projects(projects)
         elif choice == "A":
             projects = add_projects(projects)
+        elif choice == "F":
+            projects = filter_projects(projects)
         else:
+
             print("Not a valid choice")
         print(MENU)
         choice = input(">> ").upper()
@@ -64,7 +67,7 @@ def load_data(filename):
 
 def update_projects(projects):
 
-    for i, project in enumerate(projects):
+    for i, project in enumerate(projects):   #used to iterate through all the projects inside the 'projects' array
         print(f"{i} {project}")
     choice = int(input("Project choice: "))
     project = projects[choice]
@@ -106,8 +109,16 @@ def display_data(projects):
 
     return projects
 
+def filter_projects(projects):
+    date_filter_input = input("Show projects that start after date (dd/mm/yyyy): ")
+    filtered_projects = [project for project in projects if project.start_date > date_filter_input]
+    if filtered_projects:
+        for project in filtered_projects:
+            print(project)
+    else:
+        print("No projects start after this date.")
 
-
+    return projects
 
 
 main()
