@@ -14,3 +14,7 @@ class Project:
 
     def __lt__(self, other):  #sorting
         return self.priority < other.priority
+
+    def if_completed(self):
+        return self.completion >= 100
+
