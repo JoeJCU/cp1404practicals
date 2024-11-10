@@ -8,8 +8,6 @@ Joe David Mathew
 
 import csv
 import datetime
-from binascii import Incomplete
-from html.parser import incomplete
 
 
 
@@ -45,7 +43,6 @@ def main():
         elif choice == "F":
             projects = filter_projects(projects)
         else:
-
             print("Not a valid choice")
         print(MENU)
         choice = input(">> ").upper()
@@ -119,6 +116,14 @@ def filter_projects(projects):
         print("No projects start after this date.")
 
     return projects
+
+def save_project(projects):
+    """Write to File function"""
+    write_file = open(filename, 'w')
+    for project in projects:
+        print(f'{project.project}\t{project.start_date.strftime("%d/%m/%Y")}\t{project.priority}\t {project.estimate}\t{project.completion}')
+    write_file.close()
+    return True
 
 
 main()
