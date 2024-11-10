@@ -39,17 +39,9 @@ def main():
         elif choice == "S":
             save_project(projects)
         elif choice == "U":
-            projects = update_project(projects)
+            projects = update_projects(projects)
         elif choice == "A":
-            projects == add_project(projects)
-
-
-
-
-
-
-
-
+            projects = add_projects(projects)
         else:
             print("Not a valid choice")
         print(MENU)
@@ -70,6 +62,16 @@ def load_data(filename):
 
     return projects_loaded
 
+def update_projects(projects):
+
+    for i, project in enumerate(projects):
+        print(f"{i} {project}")
+    choice = int(input("Project choice: "))
+    project = projects[choice]
+    new_completion = input("New Percentage: ")
+    if new_completion:
+        project.completion = int(new_completion)
+    return projects
 
 
 def add_projects(projects):
@@ -90,11 +92,11 @@ def add_projects(projects):
 
 
 
-def display_data(projects_loaded):
-    incomplete = [item for item in projects_loaded if not item.if_completed()]
-    complete = [item for item in projects_loaded if item.if_completed()]
+def display_data(projects):
+    incomplete = [item for item in projects if not item.if_completed()]
+    complete = [item for item in projects if item.if_completed()]
 
-    print("\nImcomplete Porjects")
+    print("\nIncomplete Porjects")
     for project in incomplete:
             print(f"{project}")
 
@@ -102,8 +104,8 @@ def display_data(projects_loaded):
     for project in complete:
             print(f"{project}")
 
+    return projects
 
-def save_project():
 
 
 
