@@ -99,7 +99,7 @@ def display_data(projects):
     print("\nIncomplete Porjects")
     for project in incomplete:
             print(f"{project}")
-
+ 0
     print("\nComplete Projects")
     for project in complete:
             print(f"{project}")
