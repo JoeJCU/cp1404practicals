@@ -8,6 +8,8 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+conversionRate = 1.60934
+
 class ConvertMilesKm(App):
     """ GUI to convert Miles to Km """
 
@@ -19,4 +21,9 @@ class ConvertMilesKm(App):
         return self.root
 
 
-    # def convertion(self):
+    def handle_convertion(self):
+        try:
+
+    def handle_incrementation(self, value):
+        try:
+            increment_state = value
