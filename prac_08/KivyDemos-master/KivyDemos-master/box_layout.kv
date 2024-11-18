@@ -3,6 +3,7 @@ BoxLayout:
 #    orientation: 'horizontal'
     Button:
         text: 'Clear'
+        on_press: app.clear_handle()
 
     TextInput:
         id: input_name
@@ -11,10 +12,11 @@ BoxLayout:
     Button:
         id: output_label
         text: 'Greet'
-        on_press: app.handle_greet()
+        on_press: app.handle_greet()  #on  activated when the button is pressed. It runs the 'handle_greet()'function in the py file
 
 
     Label:
+        id: output_label
         text:"Enter your Name"
         color: (1,1,0,1)
 
