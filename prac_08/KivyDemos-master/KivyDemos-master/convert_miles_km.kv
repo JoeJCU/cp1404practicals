@@ -2,7 +2,6 @@ BoxLayout:
     orientation: 'vertical'
     BoxLayout:
         orientation: 'horizontal'
-
         TextInput:
             id: input_number
             text: '10'
@@ -17,11 +16,11 @@ BoxLayout:
             Button:             #down
                 text: 'Down'
                 on_press: app.handle_incrementation(input_number.text, -1)
-        Button:
-            text: 'Convert Miles to Km'
-            on_press: app.handle_convertion(input_number.text)
+    Button:
+        text: 'Convert Miles to Km'
+        on_press: app.handle_convertion(input_number.text)
 
-        Label:
-            id: output_distance
-            text: 'Output distance'
-            color: (1, 1, 0, 1)
+    Label:
+        id: output_distance
+        text: 'Output distance'
+        color: (1, 1, 0, 1)
