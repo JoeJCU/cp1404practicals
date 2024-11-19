@@ -20,7 +20,6 @@ class ConvertMilesKm(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
-
     def handle_convertion(self, text):
         try:
             miles = float(text)
@@ -28,8 +27,6 @@ class ConvertMilesKm(App):
             self.root.ids.output_distance.text = str(km)
         except ValueError:
             miles = 0
-
-
 
     def handle_incrementation(self, text, value):
         try:
