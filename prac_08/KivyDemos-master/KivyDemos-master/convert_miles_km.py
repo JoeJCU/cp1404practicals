@@ -24,6 +24,11 @@ class ConvertMilesKm(App):
     def handle_convertion(self):
         try:
 
-    def handle_incrementation(self, value):
+    def handle_incrementation(self, text, value):
         try:
-            increment_state = value
+            miles = int(text)
+        except ValueError:
+            miles = 0
+
+        
+
