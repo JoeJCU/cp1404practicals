@@ -33,4 +33,4 @@ class Car:
 
 
     def ___str___(self):
-        return f"{self.name}, fuel= {self.fuel}, odometer= {self._odometer}"
+        return f"name={self.name}, fuel= {self.fuel}, odometer= {self._odometer}"

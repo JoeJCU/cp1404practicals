@@ -6,7 +6,6 @@ import random
 from prac_09.car import Car
 
 class Unreliablecar(Car):
-
     def __init__(self, name, fuel, reliability):
         super().__init__(name, fuel)
         self.reliability = reliability  #stand alone attribute
