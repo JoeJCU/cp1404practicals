@@ -25,7 +25,9 @@ def main():
     while option != "q":
 
         if option == "c":
-            current_taxi = taxi_choose(taxi_list)
+            choosen_taxi = taxi_choose(taxi_list)
+            current_taxi = taxi_list[choosen_taxi]
+            print(current_taxi)
             print(f"Bill to date: ${bill_to_date}")
         elif option == "d":
             if current_taxi == None:
@@ -43,6 +45,7 @@ def taxi_drive(current_taxi, bill_to_date):
     try:
         distance = float(input("Drive how far? "))
         current_taxi.start_fare()
+
         current_taxi.drive(distance)
         print(f"Your {current_taxi.name} trip cost you: ${current_taxi.get_fare()}")
         bill_to_date += current_taxi.get_fare()
@@ -67,6 +70,7 @@ def taxi_choose(taxis):
         print("Invalid Input, Please choose from the list!")
         taxi_choice = int(input("Choose Taxi: "))
 
+    print(taxi_choice)
     return taxi_choice
 
 
